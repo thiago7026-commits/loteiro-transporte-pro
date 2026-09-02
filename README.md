@@ -167,11 +167,14 @@ A aplicação estará disponível em `http://localhost:8000`.
         <sub><b>Thiago</b></sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/LeoPreviato">
+        <img loading="lazy" src="https://github.com/LeoPreviato.png" width="100px;" alt="Foto de Leo no GitHub"/><br />
+        <sub><b>Leo</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
 ---
 
-## 📄 Licença
-
-Defina aqui a licença do projeto (ex: MIT, proprietária, etc.).
