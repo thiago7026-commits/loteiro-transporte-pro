@@ -162,7 +162,10 @@ A aplicação estará disponível em `http://localhost:8000`.
       </a>
     </td>
     <td align="center">
-      <!-- adicionar o 4º dev aqui -->
+      <a href="https://github.com/thiago7026-commits">
+        <img loading="lazy" src="https://github.com/thiago7026-commits.png" width="100px;" alt="Foto de Thiago no GitHub"/><br />
+        <sub><b>Thiago</b></sub>
+      </a>
     </td>
   </tr>
 </table>
