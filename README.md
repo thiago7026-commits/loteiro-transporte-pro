@@ -178,3 +178,6 @@ A aplicação estará disponível em `http://localhost:8000`.
 
 ---
 
+## Teste do ambiente
+
+Alteração de teste realizada pelo Marcos.
