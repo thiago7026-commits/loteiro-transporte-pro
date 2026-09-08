@@ -22,13 +22,16 @@
 ## 📑 Índice
 
 - [Descrição do projeto](#-descrição-do-projeto)
+- [MVP](#-mvp)
 - [Status do projeto](#-status-do-projeto)
 - [Funcionalidades](#-funcionalidades)
 - [Perfis de usuário](#-perfis-de-usuário)
 - [Regras de negócio](#-regras-de-negócio-principais)
+- [Modelo de dados](#-modelo-de-dados)
 - [Tecnologias utilizadas](#️-tecnologias-utilizadas)
 - [Acesso ao projeto](#-acesso-ao-projeto)
 - [Abrir e rodar o projeto](#-abrir-e-rodar-o-projeto)
+- [Fluxo de desenvolvimento](#-fluxo-de-desenvolvimento)
 - [Roadmap](#️-roadmap)
 - [Pessoas desenvolvedoras](#-pessoas-desenvolvedoras)
 - [Licença](#-licença)
@@ -37,147 +40,50 @@
 
 ## 📋 Descrição do projeto
 
-O **Loteiro** é um sistema que controla motoristas, veículos, passageiros, encomendas, reservas,
-pagamentos e localização em tempo real, permitindo que os passageiros façam todo o processo de
-consulta, reserva e pagamento de forma autônoma — sem depender de mensagens no grupo do WhatsApp.
+O **Loteiro** é uma plataforma para organizar o transporte de passageiros entre cidades,
+substituindo a gestão manual realizada atualmente por meio de grupos do WhatsApp.
 
-O projeto conta com 3 perfis de usuário (Passageiro, Motorista e Gerente/Dono do carro), cada um
-com um conjunto próprio de permissões e funcionalidades.
+A plataforma foi pensada para centralizar:
 
----
+- viagens;
+- veículos;
+- motoristas;
+- passageiros;
+- reservas;
+- assentos;
+- posteriormente, encomendas;
+- pagamentos;
+- localização em tempo real;
+- notificações;
+- gestão operacional.
 
-## 🚧 Status do projeto
-
-> 🚧 Projeto em construção 🚧
-
----
-
-## 🔨 Funcionalidades
-
-- 🔐 `Autenticação`: cadastro e login de passageiros via telefone/SMS, com fluxo de recuperação de acesso
-- 🎫 `Reservas`: consulta de viagens, escolha de assento e confirmação em tempo real, com suporte a necessidades especiais (ex: cadeirinha para crianças)
-- 🚗 `Veículos e viagens`: cadastro de carros, motoristas e status de viagem (Saindo, Em viagem, Parada, Almoço, Abastecimento, Banheiro, Chegando, Finalizado)
-- 📍 `Localização em tempo real`: acompanhamento do veículo no mapa com previsão de chegada e distância restante
-- 📦 `Encomendas`: registro e rastreamento de envios entre origem e destino
-- 💰 `Módulo financeiro`: controle de pendências, pagamento pela plataforma e bloqueio automático por inadimplência
-- 📊 `Painel do gerente`: visão consolidada de veículos, motoristas, ocupação, encomendas e status das viagens
+O projeto será desenvolvido de forma incremental, começando por um **MVP (Minimum Viable Product)**
+com o fluxo principal de uma viagem e suas reservas.
 
 ---
 
-## 👥 Perfis de usuário
+# 🚀 MVP
 
-| Perfil | Principais ações |
-|---|---|
-| **Passageiro** | Reservar viagens, acompanhar localização, ver histórico, pagar pendências |
-| **Motorista** | Ver viagens e passageiros atribuídos, compartilhar localização, atualizar status |
-| **Gerente / Dono do carro** | Cadastrar motoristas e veículos, criar viagens, organizar assentos e encomendas, acompanhar pagamentos |
+## Objetivo
 
----
+O primeiro objetivo do projeto é validar o fluxo principal do transporte antes de implementar
+funcionalidades mais complexas.
 
-## 📐 Regras de negócio principais
+### Fluxo principal
 
-- **Bloqueio por inadimplência** — passageiro com pendência não pode fazer nova reserva até regularizar o pagamento
-- **Liberação automática** — pagamento confirmado libera o passageiro sem intervenção do gerente
-- **Controle de motoristas** — cadastro de motorista feito exclusivamente pelo gerente
-- **Prevenção de concorrência** — o sistema impede que dois passageiros ocupem a mesma vaga/assento
-- **Necessidades especiais** — passageiro pode indicar na reserva a necessidade de cadeirinha infantil ou outro tipo de assento especial *(regra a detalhar)*
-
----
-
-## 🛠️ Tecnologias utilizadas
-
-- [Python](https://www.python.org/)
-- [Django](https://www.djangoproject.com/) + [Django REST Framework](https://www.django-rest-framework.org/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Docker](https://www.docker.com/)
-- [Git](https://git-scm.com/) / [GitHub](https://github.com/)
-
----
-
-## 📁 Acesso ao projeto
-
-Você pode acessar o código-fonte deste repositório ou baixá-lo via clone:
-
-```bash
-git clone https://github.com/seu-usuario/loteiro.git
-```
-
----
-
-## 🛠 Abrir e rodar o projeto
-
-Após clonar o repositório:
-
-```bash
-cd loteiro
-
-# Suba os containers
-docker-compose up --build
-
-# Rode as migrations
-docker-compose exec web python manage.py migrate
-
-# Crie um superusuário
-docker-compose exec web python manage.py createsuperuser
-```
-
-A aplicação estará disponível em `http://localhost:8000`.
-
-> ⚠️ Ajuste os comandos acima conforme a configuração real do `docker-compose.yml` do projeto.
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Módulo de autenticação e gestão de acessos
-- [ ] Módulo de veículos e viagens
-- [ ] Módulo de reservas
-- [ ] Módulo de localização em tempo real
-- [ ] Módulo de encomendas
-- [ ] Painel do gerente
-- [ ] Notificações (viagem confirmada, motorista chegando, pagamento confirmado, etc.)
-
----
-
-## 👨‍💻 Pessoas desenvolvedoras
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/alisson1017-stack">
-        <img loading="lazy" src="https://github.com/alisson1017-stack.png" width="100px;" alt="Foto de Álisson no GitHub"/><br />
-        <sub><b>Álisson</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MiguelMDias">
-        <img loading="lazy" src="https://github.com/MiguelMDias.png" width="100px;" alt="Foto de Miguel no GitHub"/><br />
-        <sub><b>Miguel</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MarcosSouza-dev">
-        <img loading="lazy" src="https://github.com/MarcosSouza-dev.png" width="100px;" alt="Foto de Marcos no GitHub"/><br />
-        <sub><b>Marcos</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/thiago7026-commits">
-        <img loading="lazy" src="https://github.com/thiago7026-commits.png" width="100px;" alt="Foto de Thiago no GitHub"/><br />
-        <sub><b>Thiago</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/LeoPreviato">
-        <img loading="lazy" src="https://github.com/LeoPreviato.png" width="100px;" alt="Foto de Leo no GitHub"/><br />
-        <sub><b>Leo</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
----
-
-## Teste do ambiente
-
-Alteração de teste realizada pelo Marcos.
+```text
+Gerente
+   ↓
+Cria a viagem
+   ↓
+Define veículo, motorista e rota
+   ↓
+Passageiro consulta as viagens
+   ↓
+Escolhe origem e destino
+   ↓
+Escolhe um assento disponível
+   ↓
+Realiza a reserva
+   ↓
+Motorista visualiza a lista de passageiros
