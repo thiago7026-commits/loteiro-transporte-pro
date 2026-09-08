@@ -83,6 +83,46 @@ Passageiro consulta as viagens
 Escolhe origem e destino
    ↓
 Escolhe um assento disponível
+## 👨‍💻 Pessoas desenvolvedoras
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/alisson1017-stack">
+        <img loading="lazy" src="https://github.com/alisson1017-stack.png" width="100px;" alt="Foto de Álisson no GitHub"/><br />
+        <sub><b>Álisson</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/MiguelMDias">
+        <img loading="lazy" src="https://github.com/MiguelMDias.png" width="100px;" alt="Foto de Miguel no GitHub"/><br />
+        <sub><b>Miguel</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/MarcosSouza-dev">
+        <img loading="lazy" src="https://github.com/MarcosSouza-dev.png" width="100px;" alt="Foto de Marcos no GitHub"/><br />
+        <sub><b>Marcos</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/thiago7026-commits">
+        <img loading="lazy" src="https://github.com/thiago7026-commits.png" width="100px;" alt="Foto de Thiago no GitHub"/><br />
+        <sub><b>Thiago</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/LeoPreviato">
+        <img loading="lazy" src="https://github.com/LeoPreviato.png" width="100px;" alt="Foto de Leo no GitHub"/><br />
+        <sub><b>Leo</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
    ↓
 Realiza a reserva
    ↓
