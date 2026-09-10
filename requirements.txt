@@ -1,0 +1,23 @@
+# Framework
+Django
+djangorestframework
+
+# Database
+psycopg2-binary
+
+# Environment
+python-dotenv
+
+# Authentication
+djangorestframework-simplejwt
+django-cors-headers
+
+# Testing
+pytest
+pytest-django
+pytest-cov
+
+# Code Quality
+black
+flake8
+isort
